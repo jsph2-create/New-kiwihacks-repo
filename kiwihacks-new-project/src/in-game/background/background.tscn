@@ -10,4 +10,5 @@ repeat_size = Vector2(2048, 2048)
 repeat_times = 100
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=354896551]
+position = Vector2(783, 725)
 texture = ExtResource("1_luhn5")

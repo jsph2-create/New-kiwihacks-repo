@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://c775ys1v6w5g2"]
+
+[ext_resource type="Script" uid="uid://iamwgonr7hm8" path="res://src/ui/gui/stars_destroyed.gd" id="1_bi2mq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8t0bl"]
+font_size = 56
+
+[node name="ui" type="Control" unique_id=490975321]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1397183667]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=149145749]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 31.0
+offset_top = -107.0
+offset_right = 381.0
+offset_bottom = -30.0
+grow_vertical = 0
+text = "Stars destroyed: 0
+"
+label_settings = SubResource("LabelSettings_8t0bl")
+script = ExtResource("1_bi2mq")

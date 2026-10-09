@@ -7,6 +7,7 @@ var exploder = preload("uid://b2ih44b2xcht2")
 
 func explode() -> void:
 	if not exploded:
+		EventBus.emit_signal("star_destroyed")
 		exploded = true
 		var expos = exploder.instantiate()
 		expos.global_position = global_position

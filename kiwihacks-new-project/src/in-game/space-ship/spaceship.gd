@@ -1,5 +1,6 @@
 extends CharacterBody2D
 var type = "ship"
+var stars_destroyed = 0
 @export var laser_gun : Node2D
 
 @export_category("ship stats")
@@ -16,12 +17,17 @@ var last_location
 var matter := 0
 var fuel = 100
 
-		
+func _ready() -> void:
+	EventBus.star_destroyed.connect(star_destroyed)
 		
 func detect_fire() -> void:
 	if Input.is_action_just_pressed("fire"):
 		laser_gun.fire()
 		
+func star_destroyed():
+	stars_destroyed += 1
+	EventBus.emit_signal("star_destroyed_ui_change", stars_destroyed)
+
 
 func _physics_process(delta: float) -> void:
 	detect_fire()
@@ -44,3 +50,4 @@ func _physics_process(delta: float) -> void:
 	rotation_degrees = wrap(rotation_degrees, 0, 360)
 
 	move_and_slide()
+	
