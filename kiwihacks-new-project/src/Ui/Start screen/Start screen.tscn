@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://shsey1vo56uf" path="res://src/ui/Start screen/pixil-layer-0.png" id="1_tfian"]
 [ext_resource type="Script" uid="uid://dq531wfpf0374" path="res://src/ui/Start screen/button-go.gd" id="2_1lfr0"]
-[ext_resource type="PackedScene" path="res://src/in-game/space/space.tscn" id="3_x1nbc"]
+[ext_resource type="PackedScene" uid="uid://b4j762g51k1hs" path="res://src/in-game/space/space_scene.tscn" id="3_oje2o"]
 [ext_resource type="Script" uid="uid://baqoppk7axnr0" path="res://src/ui/Start screen/button-quit.gd" id="4_ct6ns"]
 
 [node name="StartScreen" type="Node2D" unique_id=1179855060]
@@ -33,7 +33,7 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "PLAY"
 script = ExtResource("2_1lfr0")
-button_go_location = ExtResource("3_x1nbc")
+button_go_location = ExtResource("3_oje2o")
 
 [node name="Quit" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer" unique_id=414813342]
 custom_minimum_size = Vector2(500, 100)

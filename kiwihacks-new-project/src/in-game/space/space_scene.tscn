@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b4j762g51k1hs"]
+
+[ext_resource type="PackedScene" uid="uid://dggxvde21rke3" path="res://src/in-game/background/background.tscn" id="1_8hk7i"]
+
+[node name="SpaceScene" type="Node2D" unique_id=1686881690]
+
+[node name="Background" parent="." unique_id=891911665 instance=ExtResource("1_8hk7i")]
+scroll_offset = Vector2(2, 1)
