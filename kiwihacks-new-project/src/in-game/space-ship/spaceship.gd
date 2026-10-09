@@ -18,9 +18,13 @@ var fuel = 100
 
 		
 		
-
+func detect_fire() -> void:
+	if Input.is_action_just_pressed("fire"):
+		laser_gun.fire()
+		
 
 func _physics_process(delta: float) -> void:
+	detect_fire()
 	
 	last_location = global_position
 	#basic player movement
