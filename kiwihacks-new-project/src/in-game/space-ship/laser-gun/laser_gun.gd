@@ -10,5 +10,9 @@ func _ready() -> void:
 func fire():
 	raycast.force_raycast_update()
 	if raycast.is_colliding():
-		print("Hit: ", raycast.get_collider())
+		var collider = raycast.get_collider()
+		print(collider)
+		
+		if collider.get_parent().get("star"):
+			collider.get_parent().explode()
 	
