@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://shsey1vo56uf"
-path="res://.godot/imported/pixil-layer-0.png-ba32c58e2d87b9cc980e4baf07988fad.ctex"
+uid="uid://oayw74l8j1p6"
+path="res://.godot/imported/laser-gun.png-c9654ed52bf84a5e981d850e90271772.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/ui/Start screen/pixil-layer-0.png"
-dest_files=["res://.godot/imported/pixil-layer-0.png-ba32c58e2d87b9cc980e4baf07988fad.ctex"]
+source_file="res://src/in-game/space-ship/laser-gun/laser-gun.png"
+dest_files=["res://.godot/imported/laser-gun.png-c9654ed52bf84a5e981d850e90271772.ctex"]
 
 [params]
 
