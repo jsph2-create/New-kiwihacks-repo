@@ -40,7 +40,7 @@ func _physics_process(delta: float) -> void:
 
 	#turn to mouse
 	var target_angle = (get_global_mouse_position() - global_position).angle()
-	rotation = lerp_angle(rotation, target_angle, 15 * delta)
+	rotation = lerp_angle(rotation, target_angle, 8 * delta)
 	rotation_degrees = wrap(rotation_degrees, 0, 360)
 
 	move_and_slide()
