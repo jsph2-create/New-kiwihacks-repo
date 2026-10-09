@@ -44,9 +44,10 @@ _data = {
 &"explode": SubResource("Animation_mvros")
 }
 
-[node name="Node2D" type="Node2D" unique_id=685149984 node_paths=PackedStringArray("explode_ani")]
+[node name="Node2D" type="Node2D" unique_id=685149984 node_paths=PackedStringArray("explode_ani", "area2d_node")]
 script = ExtResource("1_mvros")
 explode_ani = NodePath("AnimationPlayer")
+area2d_node = NodePath("Area2D")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1315205304]
 
