@@ -1,9 +1,30 @@
 [gd_scene format=3 uid="uid://doy12jabfl28n"]
 
-[ext_resource type="Texture2D" uid="uid://shsey1vo56uf" path="res://src/ui/Start screen/pixil-layer-0.png" id="1_tfian"]
+[ext_resource type="Texture2D" uid="uid://vlr0g6gx461h" path="res://src/in-game/background/bg.png" id="1_oje2o"]
 [ext_resource type="Script" uid="uid://dq531wfpf0374" path="res://src/ui/Start screen/button-go.gd" id="2_1lfr0"]
 [ext_resource type="PackedScene" uid="uid://b4j762g51k1hs" path="res://src/in-game/space/space_scene.tscn" id="3_oje2o"]
 [ext_resource type="Script" uid="uid://baqoppk7axnr0" path="res://src/ui/Start screen/button-quit.gd" id="4_ct6ns"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pivdn"]
+bg_color = Color(0.8509804, 0.49803922, 0.2509804, 0.77254903)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_safe7"]
+bg_color = Color(0.9637793, 0.7126898, 0.556145, 0.77254903)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_enm2i"]
+bg_color = Color(0.38916013, 0.2033233, 0.06583177, 0.77254903)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
 
 [node name="StartScreen" type="Node2D" unique_id=1179855060]
 
@@ -13,9 +34,13 @@
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -76.0
+offset_top = -312.0
+offset_right = 52.0
+offset_bottom = 656.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_tfian")
+texture = ExtResource("1_oje2o")
 
 [node name="CenterContainer" type="CenterContainer" parent="CanvasLayer" unique_id=640980732]
 anchors_preset = 15
@@ -26,11 +51,15 @@ grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/CenterContainer" unique_id=548750528]
 layout_mode = 2
+theme_override_constants/separation = 12
 
 [node name="Play" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer" unique_id=1240074752]
 custom_minimum_size = Vector2(500, 100)
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_pivdn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_safe7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_enm2i")
 text = "PLAY"
 script = ExtResource("2_1lfr0")
 button_go_location = ExtResource("3_oje2o")
@@ -39,6 +68,9 @@ button_go_location = ExtResource("3_oje2o")
 custom_minimum_size = Vector2(500, 100)
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_pivdn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_safe7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_enm2i")
 text = "QUIT"
 script = ExtResource("4_ct6ns")
 
