@@ -6,7 +6,7 @@ func explode() -> void:
 	var expos = exploder.instantiate()
 	expos.global_position = global_position
 	get_tree().current_scene.add_child(expos)
-	get_tree().current_scene.add_child(expos)
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

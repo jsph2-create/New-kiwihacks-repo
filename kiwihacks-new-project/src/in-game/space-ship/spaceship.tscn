@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c1x44g2wtxkis"]
 
 [ext_resource type="Script" uid="uid://ct21xciqowcqd" path="res://src/in-game/space-ship/spaceship.gd" id="1_n2fdh"]
-[ext_resource type="Texture2D" uid="uid://dxj8aeudm85v6" path="res://src/in-game/space-ship/spaceship.png" id="2_n2fdh"]
+[ext_resource type="Texture2D" uid="uid://dxj8aeudm85v6" path="res://src/in-game/space-ship/Spaceship.png" id="2_n2fdh"]
 [ext_resource type="PackedScene" uid="uid://bfoucn57s3wnc" path="res://src/in-game/space-ship/laser-gun/laser-gun.tscn" id="3_diuti"]
 
 [sub_resource type="Animation" id="Animation_y5l04"]
@@ -77,6 +77,7 @@ region_rect = Rect2(0, 0, 256, 256)
 libraries/ = SubResource("AnimationLibrary_y5l04")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1592434852]
+zoom = Vector2(0.1, 0.1)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1276052295]
 visible = false
