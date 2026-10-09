@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://shsey1vo56uf"
-path="res://.godot/imported/pixil-layer-0.png-ba32c58e2d87b9cc980e4baf07988fad.ctex"
+uid="uid://cx7tlhcbk2vbr"
+path="res://.godot/imported/1.png-d67f843fcab87b0e4999cf063bc41a40.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/ui/Start screen/pixil-layer-0.png"
-dest_files=["res://.godot/imported/pixil-layer-0.png-ba32c58e2d87b9cc980e4baf07988fad.ctex"]
+source_file="res://src/misc/1.png"
+dest_files=["res://.godot/imported/1.png-d67f843fcab87b0e4999cf063bc41a40.ctex"]
 
 [params]
 
