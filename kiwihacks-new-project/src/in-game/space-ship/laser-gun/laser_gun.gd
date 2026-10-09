@@ -16,7 +16,7 @@ func _ready() -> void:
 
 func beam(loc) -> void:
 	var tween = create_tween()
-	var line = draw_line_between(barrel.position, loc , Color.GREEN, 4.0)
+	var line = draw_line_between(barrel.position, loc , Color.GREEN, 30.0)
 	tween.tween_property(line, "modulate", Color.TRANSPARENT, 0.3)
 	await get_tree().create_timer(1.0).timeout
 	line.queue_free()

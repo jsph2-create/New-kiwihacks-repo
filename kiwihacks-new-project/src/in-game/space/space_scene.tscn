@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://mg76271owmuw" path="res://src/in-game/space/space_scene.gd" id="1_23aeu"]
 [ext_resource type="PackedScene" uid="uid://boouda5s7i42o" path="res://src/in-game/star/star.tscn" id="2_j1hwo"]
 [ext_resource type="PackedScene" uid="uid://c1x44g2wtxkis" path="res://src/in-game/space-ship/spaceship.tscn" id="4_j1hwo"]
+[ext_resource type="PackedScene" uid="uid://c775ys1v6w5g2" path="res://src/ui/gui/ui.tscn" id="5_atrv6"]
 
 [node name="SpaceScene" type="Node2D" unique_id=1686881690]
 script = ExtResource("1_23aeu")
@@ -13,3 +14,9 @@ spawn_sun = ExtResource("2_j1hwo")
 scroll_offset = Vector2(2, 1)
 
 [node name="SpaceShip" parent="." unique_id=1008286286 instance=ExtResource("4_j1hwo")]
+
+[node name="ui" parent="." unique_id=490975321 instance=ExtResource("5_atrv6")]
+offset_left = -4094.0
+offset_top = -4095.0
+offset_right = -4094.0
+offset_bottom = -4095.0
