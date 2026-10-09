@@ -1,8 +1,12 @@
 [gd_scene format=3 uid="uid://b4j762g51k1hs"]
 
 [ext_resource type="PackedScene" uid="uid://dggxvde21rke3" path="res://src/in-game/background/background.tscn" id="1_8hk7i"]
+[ext_resource type="Script" uid="uid://mg76271owmuw" path="res://src/in-game/space/space_scene.gd" id="1_23aeu"]
+[ext_resource type="PackedScene" uid="uid://b2ih44b2xcht2" path="res://src/in-game/explosion/explode_particles.tscn" id="2_j1hwo"]
 
 [node name="SpaceScene" type="Node2D" unique_id=1686881690]
+script = ExtResource("1_23aeu")
+spawn_sun = ExtResource("2_j1hwo")
 
 [node name="Background" parent="." unique_id=891911665 instance=ExtResource("1_8hk7i")]
 scroll_offset = Vector2(2, 1)
