@@ -4,6 +4,10 @@
 [ext_resource type="Script" uid="uid://dq531wfpf0374" path="res://src/ui/Start screen/button-go.gd" id="2_1lfr0"]
 [ext_resource type="PackedScene" uid="uid://b4j762g51k1hs" path="res://src/in-game/space/space_scene.tscn" id="3_oje2o"]
 [ext_resource type="Script" uid="uid://baqoppk7axnr0" path="res://src/ui/Start screen/button-quit.gd" id="4_ct6ns"]
+[ext_resource type="FontFile" uid="uid://5bnk3hm746qt" path="res://src/fonts/RussoOne-Regular.ttf" id="5_safe7"]
+[ext_resource type="Texture2D" uid="uid://24emlp5hvudv" path="res://src/in-game/space/Star.png" id="6_aefw2"]
+[ext_resource type="Texture2D" uid="uid://dxj8aeudm85v6" path="res://src/in-game/space-ship/Spaceship.png" id="7_8lpto"]
+[ext_resource type="Texture2D" uid="uid://oayw74l8j1p6" path="res://src/in-game/space-ship/laser-gun/laser-gun.png" id="8_b314s"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pivdn"]
 bg_color = Color(0.8509804, 0.49803922, 0.2509804, 0.77254903)
@@ -26,6 +30,171 @@ corner_radius_top_right = 32
 corner_radius_bottom_right = 32
 corner_radius_bottom_left = 32
 
+[sub_resource type="LabelSettings" id="LabelSettings_8t0bl"]
+font = ExtResource("5_safe7")
+font_size = 144
+outline_size = 16
+outline_color = Color(0.6604705, 0.34711248, 0.030919386, 1)
+
+[sub_resource type="Animation" id="Animation_aefw2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/TextureRect:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.5707964]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/TextureRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-90, 1469)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Control/TextureRect3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(59.000008, 13.000004)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/Control/TextureRect4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1577.9999, 306)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/Control/TextureRect2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1361, 677)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CanvasLayer/Control/Spaceship:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(362.85126, 745.85126)]
+}
+
+[sub_resource type="Animation" id="Animation_8lpto"]
+resource_name = "move"
+length = 12.0
+loop_mode = 2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/TextureRect:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 12),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-1.5707964, -1.5323990832510215]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/TextureRect:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 12),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-84, -612), Vector2(-84.105, -670.605)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Control/TextureRect3:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 12),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(59.000008, 13.000004), Vector2(103.535, -14.95)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/Control/TextureRect4:position")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 12),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1577.9999, 306), Vector2(1454.275, 292.635)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/Control/TextureRect2:position")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 12),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1361, 677), Vector2(1325.295, 615.37)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CanvasLayer/Control/Spaceship:position")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 12),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(362.85126, 745.85126), Vector2(575.006, 782.301)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b314s"]
+_data = {
+&"RESET": SubResource("Animation_aefw2"),
+&"move": SubResource("Animation_8lpto")
+}
+
 [node name="StartScreen" type="Node2D" unique_id=1179855060]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=593567288]
@@ -34,12 +203,14 @@ corner_radius_bottom_left = 32
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -76.0
-offset_top = -312.0
-offset_right = 52.0
-offset_bottom = 656.0
+offset_left = -90.0
+offset_top = 1469.0
+offset_right = 38.0
+offset_bottom = 2437.0
 grow_horizontal = 2
 grow_vertical = 2
+rotation = -1.5707964
+pivot_offset_ratio = Vector2(0.5, 0.5)
 texture = ExtResource("1_oje2o")
 
 [node name="CenterContainer" type="CenterContainer" parent="CanvasLayer" unique_id=640980732]
@@ -56,6 +227,7 @@ theme_override_constants/separation = 12
 [node name="Play" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer" unique_id=1240074752]
 custom_minimum_size = Vector2(500, 100)
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_pivdn")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_safe7")
@@ -67,12 +239,78 @@ button_go_location = ExtResource("3_oje2o")
 [node name="Quit" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer" unique_id=414813342]
 custom_minimum_size = Vector2(500, 100)
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_pivdn")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_safe7")
 theme_override_styles/hover = SubResource("StyleBoxFlat_enm2i")
 text = "QUIT"
 script = ExtResource("4_ct6ns")
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=50925435]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -705.0
+offset_top = -291.0
+offset_right = 705.0
+offset_bottom = -116.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "SOLAR DESTROYER"
+label_settings = SubResource("LabelSettings_8t0bl")
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=673023871]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/Control" unique_id=755156627]
+layout_mode = 0
+offset_left = 59.000008
+offset_top = 13.000004
+offset_right = 571.0
+offset_bottom = 525.0
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("6_aefw2")
+
+[node name="TextureRect4" type="TextureRect" parent="CanvasLayer/Control" unique_id=6122424]
+layout_mode = 0
+offset_left = 1577.9999
+offset_top = 306.0
+offset_right = 2090.0
+offset_bottom = 818.0001
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("6_aefw2")
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Control" unique_id=339825492]
+layout_mode = 0
+offset_left = 1361.0
+offset_top = 677.0
+offset_right = 1873.0
+offset_bottom = 1189.0001
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("6_aefw2")
+
+[node name="Spaceship" type="Sprite2D" parent="CanvasLayer/Control" unique_id=360894899]
+position = Vector2(362.85126, 745.85126)
+rotation = -1.0471976
+texture = ExtResource("7_8lpto")
+region_enabled = true
+region_rect = Rect2(0, 0, 256, 256)
+
+[node name="LaserGun" type="Sprite2D" parent="CanvasLayer/Control/Spaceship" unique_id=941053899]
+position = Vector2(40.230164, 21.97815)
+rotation = 3.1415925
+scale = Vector2(0.6331669, 0.6331669)
+texture = ExtResource("8_b314s")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2086999796]
+libraries/ = SubResource("AnimationLibrary_b314s")
+autoplay = &"move"
 
 [connection signal="pressed" from="CanvasLayer/CenterContainer/VBoxContainer/Play" to="CanvasLayer/CenterContainer/VBoxContainer/Play" method="_on_pressed"]
 [connection signal="pressed" from="CanvasLayer/CenterContainer/VBoxContainer/Quit" to="CanvasLayer/CenterContainer/VBoxContainer/Quit" method="_on_pressed"]
