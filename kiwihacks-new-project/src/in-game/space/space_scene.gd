@@ -22,9 +22,11 @@ func spawn(item, range = spawning_range, origin = Vector2(0,0) ) -> void:
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	while true:
+		spawn(spawn_sun)
+		await get_tree().create_timer(0.1).timeout
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	spawn(spawn_sun)
+	pass
