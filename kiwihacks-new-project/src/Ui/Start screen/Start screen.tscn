@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://doy12jabfl28n"]
 
-[ext_resource type="Texture2D" uid="uid://shsey1vo56uf" path="res://src/Ui/Start screen/pixil-layer-0.png" id="1_tfian"]
-[ext_resource type="Script" uid="uid://dq531wfpf0374" path="res://src/Ui/Start screen/button-go.gd" id="2_1lfr0"]
-[ext_resource type="PackedScene" uid="uid://y8u53mfxxpxl" path="res://src/in-game/space/space.tscn" id="3_x1nbc"]
-[ext_resource type="Script" uid="uid://baqoppk7axnr0" path="res://src/Ui/Start screen/button-quit.gd" id="4_ct6ns"]
+[ext_resource type="Texture2D" uid="uid://shsey1vo56uf" path="res://src/ui/Start screen/pixil-layer-0.png" id="1_tfian"]
+[ext_resource type="Script" uid="uid://dq531wfpf0374" path="res://src/ui/Start screen/button-go.gd" id="2_1lfr0"]
+[ext_resource type="PackedScene" path="res://src/in-game/space/space.tscn" id="3_x1nbc"]
+[ext_resource type="Script" uid="uid://baqoppk7axnr0" path="res://src/ui/Start screen/button-quit.gd" id="4_ct6ns"]
 
 [node name="StartScreen" type="Node2D" unique_id=1179855060]
 
