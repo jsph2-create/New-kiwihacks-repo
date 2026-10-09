@@ -3,9 +3,10 @@
 [ext_resource type="Script" uid="uid://wmmhpe1h68e4" path="res://src/in-game/space-ship/laser-gun/laser_gun.gd" id="1_pivdn"]
 [ext_resource type="Texture2D" uid="uid://oayw74l8j1p6" path="res://src/in-game/space-ship/laser-gun/laser-gun.png" id="1_xyh2p"]
 
-[node name="LaserGun" type="Node2D" unique_id=1076174354 node_paths=PackedStringArray("raycast")]
+[node name="LaserGun" type="Node2D" unique_id=1076174354 node_paths=PackedStringArray("raycast", "barrel")]
 script = ExtResource("1_pivdn")
 raycast = NodePath("RayCast2D")
+barrel = NodePath("Marker2D")
 
 [node name="LaserGun" type="Sprite2D" parent="." unique_id=2004306345]
 rotation = 1.5707964
@@ -17,5 +18,5 @@ target_position = Vector2(1000, 0)
 collide_with_areas = true
 collide_with_bodies = false
 
-[node name="Line2D" type="Line2D" parent="." unique_id=1276739557]
-points = PackedVector2Array(0, 48)
+[node name="Marker2D" type="Marker2D" parent="." unique_id=991530525]
+position = Vector2(38, 0)
