@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://boouda5s7i42o"]
+
+[ext_resource type="Script" uid="uid://dnir6peduo58f" path="res://src/in-game/star/star.gd" id="1_mvros"]
+[ext_resource type="Texture2D" uid="uid://ocpy0a4jarnl" path="res://src/in-game/star/Star.png" id="2_pekxi"]
+[ext_resource type="Texture2D" uid="uid://bw8ihrqwjbnmb" path="res://src/in-game/star/explode-star.png" id="3_citqq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e2x7v"]
+radius = 233.07724
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vvwei"]
+atlas = ExtResource("3_citqq")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_umwbs"]
+atlas = ExtResource("3_citqq")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7vje4"]
+atlas = ExtResource("3_citqq")
+region = Rect2(512, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bhijr"]
+atlas = ExtResource("3_citqq")
+region = Rect2(768, 0, 256, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b64ip"]
+animations = [{
+"frames": [{
+"duration": 0.1,
+"texture": SubResource("AtlasTexture_vvwei")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_umwbs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7vje4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bhijr")
+}],
+"loop": 1,
+"name": &"explosion",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=685149984]
+position = Vector2(5, 2)
+script = ExtResource("1_mvros")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=616872936]
+position = Vector2(0, 1)
+texture = ExtResource("2_pekxi")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1315205304]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=324286588]
+position = Vector2(-2, -2)
+shape = SubResource("CircleShape2D_e2x7v")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=707272247]
+position = Vector2(5.9999924, -7.4999924)
+scale = Vector2(1.96875, 1.8945313)
+sprite_frames = SubResource("SpriteFrames_b64ip")
+animation = &"explosion"
+frame_progress = 0.25658497
